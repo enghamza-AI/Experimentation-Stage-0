@@ -1,0 +1,19 @@
+#Game Addiction Detector
+
+#Taking Inputs
+
+hours_played = float(input("Hours played per day: "))
+sleep_lost = float(input("Hours of sleep lost: "))
+rage_quits = int(input("Number of rage quits per week: "))
+
+#Decision Rules
+
+if hours_played < 2 and sleep_lost < 1 and rage_quits < 2:
+    status = "Healthy"
+elif hours_played < 5 and sleep_lost < 3 and rage_quits < 5:
+    status = "Risky"
+
+else:
+    status = "Addicted"
+
+print("Player Status:", status)
